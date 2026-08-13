@@ -1,0 +1,121 @@
+class VehicleCategoryModel {
+  String? success;
+  String? error;
+  String? message;
+  List<VehicleData>? data;
+
+  VehicleCategoryModel({this.success, this.error, this.message, this.data});
+
+  VehicleCategoryModel.fromJson(Map<String, dynamic> json) {
+    success = json['success'];
+    error = json['error'];
+    message = json['message'];
+    if (json['data'] != null) {
+      data = <VehicleData>[];
+      json['data'].forEach((v) {
+        data!.add(VehicleData.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['success'] = success;
+    data['error'] = error;
+    data['message'] = message;
+    if (this.data != null) {
+      data['data'] = this.data!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class VehicleData {
+  String? id;
+  String? libelle;
+  String? prix;
+  String? image;
+  String? selectedImage;
+  String? status;
+  String? creer;
+  String? modifier;
+  String? updatedAt;
+  // ignore: unnecessary_question_mark
+  Null? deletedAt;
+  String? selectedImagePath;
+  String? statutCommissionPerc;
+  String? commissionPerc;
+  String? typePerc;
+  String? baseFare;
+  String? pricingSource;
+  String? surgeMultiplier;
+  String? matchedZoneId;
+  String? matchedZoneName;
+
+  VehicleData(
+      {this.id,
+      this.libelle,
+      this.prix,
+      this.image,
+      this.selectedImage,
+      this.status,
+      this.creer,
+      this.modifier,
+      this.updatedAt,
+      this.deletedAt,
+      this.selectedImagePath,
+      this.statutCommissionPerc,
+      this.commissionPerc,
+      this.typePerc,
+      this.baseFare,
+      this.pricingSource,
+      this.surgeMultiplier,
+      this.matchedZoneId,
+      this.matchedZoneName});
+
+  VehicleData.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    libelle = json['libelle'];
+    prix = json['prix'];
+    image = json['image'];
+    selectedImage = json['selected_image'];
+    status = json['status'];
+    creer = json['creer'];
+    modifier = json['modifier'];
+    updatedAt = json['updated_at'];
+    deletedAt = json['deleted_at'];
+    selectedImagePath = json['selected_image_path'];
+    statutCommissionPerc = json['statut_commission_perc'];
+    commissionPerc = json['commission_perc'];
+    typePerc = json['type_perc'];
+    baseFare = json['base_fare'];
+    pricingSource = json['pricing_source'];
+    surgeMultiplier = json['surge_multiplier'];
+    matchedZoneId = json['matched_zone_id'];
+    matchedZoneName = json['matched_zone_name'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['libelle'] = libelle;
+    data['prix'] = prix;
+    data['image'] = image;
+    data['selected_image'] = selectedImage;
+    data['status'] = status;
+    data['creer'] = creer;
+    data['modifier'] = modifier;
+    data['updated_at'] = updatedAt;
+    data['deleted_at'] = deletedAt;
+    data['selected_image_path'] = selectedImagePath;
+    data['statut_commission_perc'] = statutCommissionPerc;
+    data['commission_perc'] = commissionPerc;
+    data['type_perc'] = typePerc;
+    data['base_fare'] = baseFare;
+    data['pricing_source'] = pricingSource;
+    data['surge_multiplier'] = surgeMultiplier;
+    data['matched_zone_id'] = matchedZoneId;
+    data['matched_zone_name'] = matchedZoneName;
+    return data;
+  }
+}
