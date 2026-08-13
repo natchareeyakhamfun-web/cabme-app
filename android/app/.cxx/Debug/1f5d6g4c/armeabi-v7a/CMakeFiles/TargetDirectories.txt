@@ -1,2 +1,0 @@
-/Users/rushabhpatel/Documents/GitHub/cabme/cabme_customer/android/app/.cxx/Debug/1f5d6g4c/armeabi-v7a/CMakeFiles/edit_cache.dir
-/Users/rushabhpatel/Documents/GitHub/cabme/cabme_customer/android/app/.cxx/Debug/1f5d6g4c/armeabi-v7a/CMakeFiles/rebuild_cache.dir

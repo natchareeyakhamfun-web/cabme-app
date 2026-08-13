@@ -1,2 +1,0 @@
-/Users/rushabhpatel/Documents/GitHub/cabme/cabme_customer/android/app/.cxx/RelWithDebInfo/3f2h3x6q/x86/CMakeFiles/edit_cache.dir
-/Users/rushabhpatel/Documents/GitHub/cabme/cabme_customer/android/app/.cxx/RelWithDebInfo/3f2h3x6q/x86/CMakeFiles/rebuild_cache.dir
